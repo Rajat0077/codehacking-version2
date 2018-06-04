@@ -16,6 +16,9 @@ class AdminUsersController extends Controller
     public function index()
     {
         //
+        // return "Hello , AdminUsersController ";
+
+        return view('admin.users.index');
     }
 
     /**
@@ -26,6 +29,8 @@ class AdminUsersController extends Controller
     public function create()
     {
         //
+    
+        return view('admin.users.create');
     }
 
     /**
