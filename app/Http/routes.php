@@ -25,7 +25,7 @@ Route::get('/admin',function(){
 
 });
 
-Route::resource('/admin/users', 'AdminUsersController');
+Route::resource('/admin/users', 'AdminUsersController'); // this route name is called in layouts.admin.blade.php file  as {{route('admin.users.index')}}
 
 
 
