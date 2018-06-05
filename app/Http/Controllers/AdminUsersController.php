@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\User;
+use App\Role;
+
+use App\Http\Requests\UsersRequest;
 
 class AdminUsersController extends Controller
 {
@@ -18,7 +22,11 @@ class AdminUsersController extends Controller
         //
         // return "Hello , AdminUsersController ";
 
-        return view('admin.users.index');
+        $users = User::all(); // User means database table User Here ...
+
+        // return view('admin.users.index' , compact('users'));
+
+        return view('admin.users.index' , compact('users'));
     }
 
     /**
@@ -29,8 +37,10 @@ class AdminUsersController extends Controller
     public function create()
     {
         //
+
+        $roles = Role::lists('name','id') -> all();
     
-        return view('admin.users.create');
+        return view('admin.users.create' , compact('roles'));
     }
 
     /**
@@ -39,9 +49,16 @@ class AdminUsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UsersRequest $request)
     {
         //
+
+        // return $request -> all(); // using this we can get all data From Form while submitting the form ...
+
+        User::create($request -> all());
+
+        return redirect('/admin/users');
+
     }
 
     /**

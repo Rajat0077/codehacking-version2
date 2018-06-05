@@ -29,9 +29,10 @@
 
 </head>
 
-<body id="admin-page">
+<body id="admin-page" >
 
-<div id="wrapper">
+<div id="wrapper" style="margin-top: -65px;">
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
