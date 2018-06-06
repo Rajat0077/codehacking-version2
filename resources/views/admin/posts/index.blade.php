@@ -33,9 +33,7 @@
         <td>{{ $post -> id }}</td>
         <td> <img height="50" src="{{ $post -> photo ? $post->photo-> file : 'http://placehold.it/400x400'}}" alt=""> </td>
         <td>{{ $post -> user-> name}}</td>
-        <td>{{ $post -> category_id }}</td>
-
-        
+        <td>{{ $post -> category ? $post->category -> name : 'UnCategorized' }}</td>    
 
         <td>{{ $post -> title }}</td>
         <td>{{ $post -> body }}</td>

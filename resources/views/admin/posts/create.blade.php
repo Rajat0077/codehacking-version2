@@ -14,14 +14,15 @@
 	{!! Form::text('title', null, ['class'=>'form-control'])!!}
 </div>
 
-<div class="form-group">	
+<div class="form-group">
+
 	{!! Form::label('category_id', 'Category :')!!}
-	{!! Form::select('category_id', array(''=>'Choose Category'), null,  ['class'=>'form-control'])!!}
+	{!! Form::select('category_id', array(''=>'Choose Category') + $categories, null,  ['class'=>'form-control'])!!}
 
 </div>
 
 
-<div class="form-group">	
+<div class="form-group">		
 	{!! Form::label('photo_id','Photo Upload :') !!}
 	{!! Form::file('photo_id', ['class'=>'form-control']) !!}
 </div>	

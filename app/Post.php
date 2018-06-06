@@ -31,5 +31,10 @@ class Post extends Model
         return $this -> belongsTo('App\photo');
     } 
 
+    public function category(){
+
+        return $this -> belongsTo('App\Category');
+
+    }
       	
 }

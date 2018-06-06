@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Photo;
 
+use App\Category;
+
 
 class AdminPostsController extends Controller
 {
@@ -40,11 +42,15 @@ class AdminPostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
+    
     {
         //
         // return "Hello Create page HERE ";
 
-        return view('admin.posts.create');
+
+        $categories = Category::lists('name','id') -> all(); 
+
+        return view('admin.posts.create', compact('categories'));
 
     }
 
@@ -78,7 +84,7 @@ class AdminPostsController extends Controller
         }
 
         $user->posts()->create($input);   // Here link of user id and posts id ..
-        
+
         // Post::create($input);
 
         return redirect('/admin/posts');
