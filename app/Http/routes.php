@@ -25,7 +25,11 @@ Route::get('/admin',function(){
 
 });
 
-Route::resource('/admin/users', 'AdminUsersController'); // this route name is called in layouts.admin.blade.php file  as {{route('admin.users.index')}}
 
+Route::group(['middleware'=>'admin'], function(){  // Here we are accessing the admin middleware here ...
 
+	Route::resource('/admin/users', 'AdminUsersController'); // this route name is called in layouts.admin.blade.php file  as {{route('admin.users.index')}}
 
+	Route::resource('/admin/posts', 'AdminPostsController');
+
+});

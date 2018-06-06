@@ -11,6 +11,7 @@ use App\Photo;
 
 use App\Http\Requests\UsersRequest;
 use App\Http\Requests\UsersEditRequest;
+use Illuminate\Support\Facades\Session;
 
 class AdminUsersController extends Controller
 {
@@ -26,7 +27,7 @@ class AdminUsersController extends Controller
 
         $users = User::all(); // User means database table User Here ...
 
-        // return view('admin.users.index' , compact('users'));
+        // return view('admin.users.test' , compact('users'));
 
         return view('admin.users.index' , compact('users'));
     }
@@ -174,5 +175,20 @@ class AdminUsersController extends Controller
     public function destroy($id)
     {
         //
+
+
+        User::findOrFail($id) -> delete();
+
+        // unlink(pubic_path() . $user->photo->file);
+
+        // $user->delete();
+
+
+        // Error On Browser while calling commented lines :- Call to undefined function App\Http\Controllers\pubic_path()
+
+        Session::flash('deleted_user', 'User is Deleted SUCCESS !!!'); 
+
+        return redirect('admin/users');
+
     }
 }

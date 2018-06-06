@@ -64,11 +64,20 @@
 		
 		<div class="form-group">
 
-			{!! Form::submit('Update User', ['class'=>'btn btn-primary'])!!}
+			{!! Form::submit('Update User', ['class'=>'btn btn-primary col-sm-6'])!!}
 
 		</div>
 
 	{!! Form::close() !!}
+
+
+	{!! Form::open(['method'=>'Delete', 'action'=>['AdminUsersController@destroy', $user->id]])!!}
+
+	{!! Form::submit('Delete User', ['class'=>'btn btn-danger col-sm-6'])!!}	
+
+
+	{!! Form::close() !!}
+
 
 
 </div> <!-- Closing col-sm-9 div -->

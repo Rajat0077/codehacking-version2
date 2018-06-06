@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Post;
+
 class Photo extends Model
 
 {
@@ -23,4 +25,10 @@ class Photo extends Model
 
     }
 
+    public function posts(){
+
+        return $this-> hasMany('App\Post');
+    }
+
+    
 }

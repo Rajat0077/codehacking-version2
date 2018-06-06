@@ -1,0 +1,29 @@
+[33mcommit c550f00c1b819a8fda6443eb597279c207c16132[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Rajat0077 <singhrajat0077@gmail.com>
+Date:   Tue Jun 5 08:10:36 2018 -0800
+
+    User section working in success -except security
+
+[33mcommit 688769fea3477d9ee5a57dadbef7a74166bd1d4d[m
+Author: Rajat0077 <singhrajat0077@gmail.com>
+Date:   Tue Jun 5 04:46:35 2018 -0800
+
+    Added File for user profile
+
+[33mcommit 51b28c1946b2fae0bd4d95cf99ec2f9938608135[m
+Author: Rajat0077 <singhrajat0077@gmail.com>
+Date:   Tue Jun 5 03:56:29 2018 -0800
+
+    User page without image working
+
+[33mcommit 97e75e6a37276a6810bc54a1f39ac262e416d9af[m
+Author: Rajat0077 <singhrajat0077@gmail.com>
+Date:   Mon Jun 4 07:53:21 2018 -0800
+
+    Admin layout is created
+
+[33mcommit 5ea049086584945d33c600f983b1cd8679c690ec[m
+Author: Rajat0077 <singhrajat0077@gmail.com>
+Date:   Mon Jun 4 05:29:15 2018 -0800
+
+    Hello , This is My First Commit
